@@ -42,8 +42,6 @@ public class EventoDeportivo {
         System.out.println("Se ha añadido el servicio "+name+" al evento vs "+oponente);
     }
     
-    
-    
     // Setters
     public void setOponente(String oponente) {
         this.oponente = oponente;

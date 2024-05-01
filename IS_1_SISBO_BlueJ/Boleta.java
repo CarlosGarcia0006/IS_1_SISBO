@@ -8,11 +8,13 @@
 public class Boleta {
     private int precio;
     private EventoDeportivo evento;
+    private Localidad localidad;
 
     // Constructor
-    public Boleta(int precio, EventoDeportivo evento) {
+    public Boleta(int precio, EventoDeportivo evento, Localidad localidad) {
         this.precio = precio;
         this.evento = evento;
+        this.localidad = localidad;
     }
 
     // Setter para precio
@@ -33,6 +35,14 @@ public class Boleta {
     // Getter para evento
     public EventoDeportivo getEvento() {
         return evento;
+    }
+    
+    public void setLocalidad (Localidad localidad){
+        this.localidad = localidad;
+    }
+    
+    public Localidad getLocalidad(){
+        return localidad;
     }
 }
 

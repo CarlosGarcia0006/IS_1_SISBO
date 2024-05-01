@@ -118,6 +118,7 @@ public class Club
         }
         System.out.println("Todas las notificaciones fueron enviadas con éxito.");    
     }
+    
     public String getNombre(){
         return nombre;
     }

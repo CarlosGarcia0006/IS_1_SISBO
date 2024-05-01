@@ -10,7 +10,8 @@ public class Localidad {
     private int precio;
     private int cantidadPuestosTotal;
     private int cantidadPuestosVendidos;
-
+    private MercadoPrincipal mercadoPrincipal;
+    private MercadoSecundario mercadoSecundario;
     // Constructor
     public Localidad(String nombre, int precio, int cantidadPuestosTotal, int cantidadPuestosVendidos) {
         this.nombre = nombre;

@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=Boleta
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ Boleta\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=precio\ evento
-comment1.target=Boleta(int,\ EventoDeportivo)
+comment1.params=precio\ evento\ localidad
+comment1.target=Boleta(int,\ EventoDeportivo,\ Localidad)
 comment2.params=precio
 comment2.target=void\ setPrecio(int)
 comment3.params=
@@ -11,4 +11,8 @@ comment4.params=evento
 comment4.target=void\ setEvento(EventoDeportivo)
 comment5.params=
 comment5.target=EventoDeportivo\ getEvento()
-numComments=6
+comment6.params=localidad
+comment6.target=void\ setLocalidad(Localidad)
+comment7.params=
+comment7.target=Localidad\ getLocalidad()
+numComments=8
