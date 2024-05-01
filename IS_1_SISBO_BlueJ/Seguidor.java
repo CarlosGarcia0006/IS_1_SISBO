@@ -1,11 +1,12 @@
-
-/**
- * Write a description of class Aficionado here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 import java.util.ArrayList;
+/**
+ * La clase Seguidor se encarga de manejar todas las funcionalidades correspondientes a los seguidores, como comprar boleta, comprar servicio adicional, vender boleta en mercado secundario,
+ * transferir boleta y además, tiene algunas clases auxiliares como añadir boleta.
+ * 
+ * @author (Carlos,Juan) 
+ * @version (01/05/2024)
+ */
+
 public class Seguidor {
     private String documentoDeIdentidad;
     private String nombre;
@@ -14,7 +15,15 @@ public class Seguidor {
     private ArrayList<Boleta> boletasCompradas;
     private ArrayList<ServicioAdicionalSeguidor> servicios;
     private ArrayList<Boleta> boletasEnVenta;    
-    // Constructor
+    
+    /**
+     * El constructor de la clase Seguidor.
+     * 
+     * @param documentoDeIdentidad      El numero de documento del seguidor.
+     * @param nombre                    El nombre del usuario.
+     * @param correo                    El correo del usuario.
+     * @param contraseña                La contraseña de la cuenta.
+     */
     public Seguidor(String documentoDeIdentidad, String nombre, String correo, String contraseña) {
         this.documentoDeIdentidad = documentoDeIdentidad;
         this.nombre = nombre;
@@ -70,6 +79,7 @@ public class Seguidor {
             ServicioAdicionalSeguidor adicional = new ServicioAdicionalSeguidor(nombre,descripcion);
             servicios.add(adicional);
             System.out.println("Se ha completado la compra del servicio adicional "+name+" para el evento vs "+evento.getOponente());
+            servicio.aumentarVendidas();
         } else if (!pagoCorrecto && servicio.puedeVender()){
             System.out.println("Pago rechazado.");
         } else if (!servicio.puedeVender() && pagoCorrecto){
@@ -131,9 +141,7 @@ public class Seguidor {
         this.contraseña = contraseña;
     }
     public void setBoletasCompradas(ArrayList<Boleta> boletas){
-    
         this.boletasCompradas = boletas;
-    
     }
     // Getters
     public String getDocumentoDeIdentidad() {
@@ -153,8 +161,6 @@ public class Seguidor {
     }
     
     public ArrayList<Boleta> getBoletasCompradas(){
-        
         return boletasCompradas;
-        
     }
 }

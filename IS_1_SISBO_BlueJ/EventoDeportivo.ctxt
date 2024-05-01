@@ -1,7 +1,9 @@
 #BlueJ class context
 comment0.target=EventoDeportivo
+comment0.text=\r\n\ La\ clase\ EventoDeportivo\ puede\ ser\ creada\ por\ un\ Club\ y\ corresponde\ a\ alg\u00FAn\ evento\ que\ se\ realizar\u00E1.\r\n\ \r\n\ @author\ (Carlos,\ Juan)\ \r\n\ @version\ (01/05/2024)\r\n
 comment1.params=oponente\ estadio\ fecha\ horaIngreso\ horaCierre
 comment1.target=EventoDeportivo(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.text=\r\n\ El\ constructor\ de\ la\ clase\ EventoDeportivo.\r\n\ \r\n\ @param\ oponente\ \ \ \ \ \ El\ oponente\ contra\ el\ que\ ser\u00E1\ el\ evento\ deportivo.\r\n\ @param\ estadio\ \ \ \ \ \ \ El\ estadio\ donde\ se\ realizar\u00E1\ el\ evento\ deportivo.\r\n\ @param\ fecha\ \ \ \ \ \ \ \ \ La\ fecha\ en\ la\ que\ se\ realizar\u00E1,\ se\ deja\ en\ string\ ya\ que\ no\ se\ realizar\u00E1\ ninguna\ operaci\u00F3n\ con\ ella.\r\n\ @param\ horaIngreso\ \ \ Hora\ en\ la\ que\ se\ abrir\u00E1n\ las\ puertas\ del\ estadio,\ se\ deja\ en\ string\ ya\ que\ no\ se\ realizar\u00E1\ ninguna\ operaci\u00F3n\ con\ ella.\r\n\ @param\ horaCierre\ \ \ \ Hora\ en\ la\ que\ finaliza\ el\ evento,\ se\ deja\ en\ string\ ya\ que\ no\ se\ realizar\u00E1\ ninguna\ operaci\u00F3n\ con\ ella.\r\n
 comment10.params=servicios
 comment10.target=void\ setServicios(java.util.ArrayList)
 comment11.params=
@@ -23,6 +25,7 @@ comment2.target=void\ a\u00F1adirServicioAdicional(java.lang.String,\ java.lang.
 comment2.text=\r\n\ El\ m\u00E9todo\ a\u00F1adirServicioAdicional,\ a\u00F1ade\ un\ servicio\ adicional\ a\ este\ evento.\r\n\ @param\ name\ \ \ \ \ \ \ \ \ \ \ \ \ \ El\ nombre\ del\ servicio\ adicional\ \ \ \ \ \ \ \ \ \ \ \ \ \ \r\n\ @param\ desc\ \ \ \ \ \ \ \ \ \ \ \ \ \ La\ descripci\u00F3n\ del\ servicio\ adicional\r\n\ @param\ price\ \ \ \ \ \ \ \ \ \ \ \ \ El\ precio\ del\ servicio\ adicional\r\n\ @param\ max\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Las\ unidades\ m\u00E1ximas\ por\ cliente\ que\ se\ pondr\u00E1n\ en\ el\ servicio\ adicional.\r\n
 comment3.params=name\ price\ cant
 comment3.target=void\ a\u00F1adirLocalidad(java.lang.String,\ int,\ int)
+comment3.text=\r\n\ El\ m\u00E9todo\ a\u00F1adirLocalidad,\ le\ a\u00F1ade\ una\ localidad\ a\ este\ evento.\r\n\ \r\n\ @param\ name\ \ \ \ \ \ El\ nombre\ de\ la\ localidad.\r\n\ @param\ price\ \ \ \ \ El\ precio\ que\ tendr\u00E1\ una\ boleta\ de\ esta\ localidad.\r\n\ @param\ cant\ \ \ \ \ \ La\ capacidad\ de\ asientos\ que\ tendr\u00E1\ la\ localidad.\r\n
 comment4.params=oponente
 comment4.target=void\ setOponente(java.lang.String)
 comment5.params=estadio

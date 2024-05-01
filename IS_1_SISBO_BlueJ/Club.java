@@ -1,13 +1,13 @@
+import java.util.ArrayList;
 
 /**
- * El club es el encargado de crear eventos deportivos y tiene a su disposicion diversa informacion sobre los mismos.
+ * El club es el encargado de crear eventos deportivos y tiene a su disposicion diversa informacion sobre los mismos, además puede crear servicios adicionales que ofrecerá
+ * en determinado evento deportivo y puede vincular usuarios para enviarles notificaciones.
  * 
- * @author (Carlos) 
- * @version (29/04/2024)
+ * @author (Carlos, Juan) 
+ * @version (01/05/2024)
  */
-import java.util.ArrayList;
-import java.time.LocalDate;
-import java.time.LocalTime;
+
 
 public class Club
 {
@@ -28,6 +28,10 @@ public class Club
 
     /**
      * Constructor completo.
+     * 
+     * @param nombre    El nombre del club
+     * @param correoElectrónico     Algún correo electrónico vinculado al club
+     * @param estadioPropio         El nombre del estadio en el que juega de local.
      */
     public Club(String nombre, String correoElectronico, String estadioPropio)
     {
@@ -118,6 +122,7 @@ public class Club
         }
         System.out.println("Todas las notificaciones fueron enviadas con éxito.");    
     }
+    
     
     public String getNombre(){
         return nombre;

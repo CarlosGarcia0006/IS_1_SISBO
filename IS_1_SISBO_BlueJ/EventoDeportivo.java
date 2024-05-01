@@ -1,13 +1,12 @@
+import java.util.ArrayList;
 
 /**
- * Write a description of class Evento_deportivo here.
+ * La clase EventoDeportivo puede ser creada por un Club y corresponde a algún evento que se realizará.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Carlos, Juan) 
+ * @version (01/05/2024)
  */
-import java.time.LocalDate;
-import java.time.LocalTime;
-import java.util.ArrayList;
+
 
 public class EventoDeportivo {
     private String oponente;
@@ -18,7 +17,15 @@ public class EventoDeportivo {
     private ArrayList<Localidad> localidades;
     private ArrayList<ServicioAdicionalClub> servicios;
 
-    // Constructor
+    /**
+     * El constructor de la clase EventoDeportivo.
+     * 
+     * @param oponente      El oponente contra el que será el evento deportivo.
+     * @param estadio       El estadio donde se realizará el evento deportivo.
+     * @param fecha         La fecha en la que se realizará, se deja en string ya que no se realizará ninguna operación con ella.
+     * @param horaIngreso   Hora en la que se abrirán las puertas del estadio, se deja en string ya que no se realizará ninguna operación con ella.
+     * @param horaCierre    Hora en la que finaliza el evento, se deja en string ya que no se realizará ninguna operación con ella.
+     */
     public EventoDeportivo(String oponente, String estadio, String fecha, String horaIngreso, String horaCierre) {
         this.oponente = oponente;
         this.estadio = estadio;
@@ -42,6 +49,13 @@ public class EventoDeportivo {
         System.out.println("Se ha añadido el servicio "+name+" al evento vs "+oponente);
     }
     
+    /**
+     * El método añadirLocalidad, le añade una localidad a este evento.
+     * 
+     * @param name      El nombre de la localidad.
+     * @param price     El precio que tendrá una boleta de esta localidad.
+     * @param cant      La capacidad de asientos que tendrá la localidad.
+     */
     public void añadirLocalidad(String name, int price, int cant){
         Localidad loc = new Localidad(name,price,cant,this);
         localidades.add(loc);

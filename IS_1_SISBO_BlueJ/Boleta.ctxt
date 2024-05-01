@@ -1,8 +1,9 @@
 #BlueJ class context
 comment0.target=Boleta
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Boleta\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ La\ clase\ Boleta\ principalmente\ se\ encarga\ de\ mantener\ el\ precio\ al\ que\ se\ encuentra\ (para\ cuestiones\ del\ mercado\ secundario),\ al\ igual\ que\ el\ evento\ y\ la\ localidad,\ estos\ se\ almacenan\r\n\ en\ el\ objeto\ para\ mayor\ facilidad\ a\ la\ hora\ de\ desplegar\ la\ informaci\u00F3n\ para\ el\ seguidor\ en\ un\ futuro.\r\n\ \r\n\ @author\ (Carlos,Juan)\ \r\n\ @version\ (01/05/2024)\r\n
 comment1.params=precio\ evento\ localidad
 comment1.target=Boleta(int,\ EventoDeportivo,\ Localidad)
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ Boleta.\r\n\ \r\n\ @param\ precio\ \ \ \ El\ precio\ que\ tiene\ esta\ boleta.\r\n\ @param\ evento\ \ \ \ El\ evento\ deportivo\ al\ que\ pertenece.\r\n\ @param\ localidad\ La\ localidad\ a\ la\ que\ pertenece.\r\n
 comment2.params=precio
 comment2.target=void\ setPrecio(int)
 comment3.params=

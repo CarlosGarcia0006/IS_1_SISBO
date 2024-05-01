@@ -1,10 +1,14 @@
 #BlueJ class context
 comment0.target=MercadoSecundario
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Mercado_secundario\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ La\ clase\ MercadoSecundario\ se\ encarga\ de\ almacenar\ las\ boletas\ de\ determinada\ localidad\ que\ hayan\ sido\ vendidas\ por\ un\ seguidor.\r\n\ \r\n\ @author\ (Carlos,\ Juan)\ \r\n\ @version\ (01/05/2024)\r\n
 comment1.params=
 comment1.target=MercadoSecundario()
-comment2.params=boletas
-comment2.target=void\ setBoletas(java.util.ArrayList)
+comment1.text=\r\n\ El\ constructor\ de\ la\ clase\ MercadoSecundario.\r\n
+comment2.params=boleta
+comment2.target=void\ a\u00F1adirBoleta(Boleta)
+comment2.text=\r\n\ El\ m\u00E9todo\ a\u00F1adirBoleta\ permite\ a\u00F1adir\ una\ boleta\ al\ mercado\ secundario,\r\n\ este\ m\u00E9todo\ debe\ \u00FAnicamente\ ser\ llamado\ por\ el\ m\u00E9todo\ venderBoleta\ de\ la\ clase\ Seguidor.\r\n\ \r\n\ @param\ boleta\ \ \ \ la\ boleta\ que\ se\ a\u00F1adir\u00E1\ al\ mercado\ secundario.\r\n
 comment3.params=boletas
-comment3.target=java.util.ArrayList\ getBoletas(java.util.ArrayList)
-numComments=4
+comment3.target=void\ setBoletas(java.util.ArrayList)
+comment4.params=boletas
+comment4.target=java.util.ArrayList\ getBoletas(java.util.ArrayList)
+numComments=5

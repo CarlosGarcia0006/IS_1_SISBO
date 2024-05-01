@@ -1,5 +1,6 @@
 #BlueJ class context
 comment0.target=Club
+comment0.text=\r\n\ El\ club\ es\ el\ encargado\ de\ crear\ eventos\ deportivos\ y\ tiene\ a\ su\ disposicion\ diversa\ informacion\ sobre\ los\ mismos,\ adem\u00E1s\ puede\ crear\ servicios\ adicionales\ que\ ofrecer\u00E1\r\n\ en\ determinado\ evento\ deportivo\ y\ puede\ vincular\ usuarios\ para\ enviarles\ notificaciones.\r\n\ \r\n\ @author\ (Carlos,\ Juan)\ \r\n\ @version\ (01/05/2024)\r\n
 comment1.params=
 comment1.target=Club()
 comment1.text=\r\n\ Constructor\ vacio.\r\n
@@ -17,7 +18,7 @@ comment15.params=correos
 comment15.target=void\ setCorreosVinculados(java.util.ArrayList)
 comment2.params=nombre\ correoElectronico\ estadioPropio
 comment2.target=Club(java.lang.String,\ java.lang.String,\ java.lang.String)
-comment2.text=\r\n\ Constructor\ completo.\r\n
+comment2.text=\r\n\ Constructor\ completo.\r\n\ \r\n\ @param\ nombre\ \ \ \ El\ nombre\ del\ club\r\n\ @param\ correoElectr\u00F3nico\ \ \ \ \ Alg\u00FAn\ correo\ electr\u00F3nico\ vinculado\ al\ club\r\n\ @param\ estadioPropio\ \ \ \ \ \ \ \ \ El\ nombre\ del\ estadio\ en\ el\ que\ juega\ de\ local.\r\n
 comment3.params=oponente\ estadio\ fecha\ horaIngreso\ horaCierre
 comment3.target=void\ crearEventoDeportivo(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
 comment3.text=\r\n\ El\ m\u00E9todo\ crearEventoDeportivo\ se\ encarga\ de,\ con\ los\ atributos\ recibidos,\ de\ a\u00F1adir\ un\ evento\ deportivo\ al\ arraylist\ "eventos",\ en\ esta\ clase.\r\n\ @param\ oponente\ \ \ \ \ \ el\ nombre\ del\ equipo\ al\ que\ se\ enfrentar\u00E1.\r\n\ @param\ estadio\ \ \ \ \ \ \ el\ nombre\ del\ estadio\ donde\ ser\u00E1\ el\ partido.\r\n\ @param\ fecha\ \ \ \ \ \ \ \ \ la\ fecha\ en\ la\ que\ se\ realizar\u00E1\ el\ partido\r\n\ @param\ horaIngreso\ \ \ la\ hora\ a\ la\ que\ se\ abrir\u00E1n\ las\ puertas\r\n\ @param\ horaCierre\ \ \ \ la\ hora\ a\ la\ que\ se\ terminar\u00E1\ el\ evento\r\n

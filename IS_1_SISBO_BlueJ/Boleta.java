@@ -1,16 +1,23 @@
 
 /**
- * Write a description of class Boleta here.
+ * La clase Boleta principalmente se encarga de mantener el precio al que se encuentra (para cuestiones del mercado secundario), al igual que el evento y la localidad, estos se almacenan
+ * en el objeto para mayor facilidad a la hora de desplegar la información para el seguidor en un futuro.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Carlos,Juan) 
+ * @version (01/05/2024)
  */
 public class Boleta {
     private int precio;
     private EventoDeportivo evento;
     private Localidad localidad;
 
-    // Constructor
+    /**
+     * Constructor de la clase Boleta.
+     * 
+     * @param precio    El precio que tiene esta boleta.
+     * @param evento    El evento deportivo al que pertenece.
+     * @param localidad La localidad a la que pertenece.
+     */
     public Boleta(int precio, EventoDeportivo evento, Localidad localidad) {
         this.precio = precio;
         this.evento = evento;

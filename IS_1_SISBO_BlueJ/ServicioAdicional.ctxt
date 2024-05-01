@@ -1,8 +1,9 @@
 #BlueJ class context
 comment0.target=ServicioAdicional
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Servicio_adicional\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ La\ clase\ Servicio\ Adicional\ se\ encuentra\ dise\u00F1ada\ para\ ser\ heredada\ por\ ServicioAdicionalClub\ y\ ServicioAdicionalSeguidor.\r\n\ \r\n\ @author\ (Carlos,Juan)\ \r\n\ @version\ (01/05/2024)\r\n
 comment1.params=nombre\ descripcion
 comment1.target=ServicioAdicional(java.lang.String,\ java.lang.String)
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ ServicioAdicional.\r\n\ \r\n\ @param\ nombre\ \ \ \ El\ nombre\ del\ servicio\ adicional.\r\n\ @param\ descripci\u00F3n\ \ \ Una\ descripci\u00F3n\ relacionada\ a\ este\ servicio\ adicional.\r\n
 comment2.params=nombre
 comment2.target=void\ setNombre(java.lang.String)
 comment3.params=descripcion

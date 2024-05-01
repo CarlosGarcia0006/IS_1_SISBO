@@ -1,15 +1,19 @@
 
 /**
- * Write a description of class ServicioAdicionalSeguidor here.
+ * La clase ServicioAdicionalSeguidor hereda de ServicioAdicional, a diferencia de ServicioAdicionalClub, esta no tiene métodos ni atributos propios.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Carlos,Juan) 
+ * @version (01/05/2024)
  */
+
 public class ServicioAdicionalSeguidor extends ServicioAdicional
 {
 
     /**
-     * Constructor for objects of class ServicioAdicionalSeguidor
+     * Constructor para la clase ServicioAdicionalSeguidor
+     * 
+     * @param nombre    El nombre del servicio adicional.
+     * @param descripcion   Una descripción relacionada al servicio adicional.
      */
     public ServicioAdicionalSeguidor(String nombre, String descripcion)
     {

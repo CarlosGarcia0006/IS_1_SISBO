@@ -1,9 +1,10 @@
 
 /**
- * Write a description of class Localidad here.
+ * La clase Localidad pertenece a algún evento deportivo, esta se encarga de almacenar su propio precio, cantidad de asientos totales
+ * y cantidad de asientos vendidos, además, por medio de esta clase se generan las boletas. Cada Localidad tiene su propio mercado secundario.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Carlos, Juan) 
+ * @version (01/05/2024)
  */
 public class Localidad {
     private String nombre;
@@ -12,7 +13,14 @@ public class Localidad {
     private int cantidadPuestosVendidos;
     private MercadoSecundario mercadoSecundario;
     private EventoDeportivo evento;
-    // Constructor
+    /**
+     * Constructor de la clase Localidad.
+     * 
+     * @param nombre    el nombre de la localidad.
+     * @param precio    el precio definido para esta localidad.
+     * @param cantidadPuestosTotal      La cantidad de puestos totales que se podrán vender de esta localidad.
+     * @param evento    el evento deportivo al que estará relacionado.
+     */
     public Localidad(String nombre, int precio, int cantidadPuestosTotal, EventoDeportivo evento) {
         this.nombre = nombre;
         this.cantidadPuestosTotal = cantidadPuestosTotal;
@@ -21,6 +29,13 @@ public class Localidad {
         this.evento = evento;
         mercadoSecundario = new MercadoSecundario();
     }
+    
+    /**
+     * El método generarBoleta se encarga principalmente de crear un objeto boleta y devolverlo,
+     * la única clase capaz de crear boleta es localidad.
+     * 
+     * @return La boleta generada.
+     */
     public Boleta generarBoleta(){
         Boleta boleta = null;
         
@@ -35,6 +50,13 @@ public class Localidad {
         return boleta;
     }
     
+    /**
+     * El método puedeGenerar se encarga de verificar que la cantidad de puestos vendidos no haya excedido la cantidad de puestos totales.
+     * Si el número de puestos vendidos es menor al número total devuelve true, en cualquier otro caso devuelve false.
+     * 
+     * @return la variable bool con true o false dependiendo de si hay menor cantidad de boletas vendidas que totales o si hay mayor o igual número de boletas vendidas que totales respectivamente.
+     */
+
     public boolean puedeGenerar(){
         boolean bool = false;
         

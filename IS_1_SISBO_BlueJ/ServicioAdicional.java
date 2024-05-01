@@ -1,15 +1,21 @@
 
 /**
- * Write a description of class Servicio_adicional here.
+ * La clase Servicio Adicional se encuentra diseñada para ser heredada por ServicioAdicionalClub y ServicioAdicionalSeguidor.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Carlos,Juan) 
+ * @version (01/05/2024)
  */
+
 public class ServicioAdicional {
     private String nombre;
     private String descripcion;
 
-    // Constructor
+    /**
+     * Constructor de la clase ServicioAdicional.
+     * 
+     * @param nombre    El nombre del servicio adicional.
+     * @param descripción   Una descripción relacionada a este servicio adicional.
+     */
     public ServicioAdicional(String nombre, String descripcion) {
         this.nombre = nombre;
         this.descripcion = descripcion;

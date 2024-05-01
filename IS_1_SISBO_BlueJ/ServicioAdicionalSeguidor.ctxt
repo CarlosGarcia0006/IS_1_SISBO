@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=ServicioAdicionalSeguidor
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ ServicioAdicionalSeguidor\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ La\ clase\ ServicioAdicionalSeguidor\ hereda\ de\ ServicioAdicional,\ a\ diferencia\ de\ ServicioAdicionalClub,\ esta\ no\ tiene\ m\u00E9todos\ ni\ atributos\ propios.\r\n\ \r\n\ @author\ (Carlos,Juan)\ \r\n\ @version\ (01/05/2024)\r\n
 comment1.params=nombre\ descripcion
 comment1.target=ServicioAdicionalSeguidor(java.lang.String,\ java.lang.String)
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ ServicioAdicionalSeguidor\r\n
+comment1.text=\r\n\ Constructor\ para\ la\ clase\ ServicioAdicionalSeguidor\r\n\ \r\n\ @param\ nombre\ \ \ \ El\ nombre\ del\ servicio\ adicional.\r\n\ @param\ descripcion\ \ \ Una\ descripci\u00F3n\ relacionada\ al\ servicio\ adicional.\r\n
 numComments=2
