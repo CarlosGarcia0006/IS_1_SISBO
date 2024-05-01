@@ -13,8 +13,7 @@ public class Seguidor {
     private String contraseña;
     private ArrayList<Boleta> boletasCompradas;
     private ArrayList<ServicioAdicionalSeguidor> servicios;
-    
-    
+    private ArrayList<Boleta> boletasEnVenta;    
     // Constructor
     public Seguidor(String documentoDeIdentidad, String nombre, String correo, String contraseña) {
         this.documentoDeIdentidad = documentoDeIdentidad;
@@ -22,10 +21,11 @@ public class Seguidor {
         this.correo = correo;
         this.contraseña = contraseña;
         this.boletasCompradas = new ArrayList();
+        this.boletasEnVenta = new ArrayList();
     }
     
     /**
-     * La clase comprarBoleta permite que el usuario realice la compra de una boleta, además, en esta misma opción se le permiten cosas
+     * El método comprarBoleta permite que el usuario realice la compra de una boleta, además, en esta misma opción se le permiten cosas
      * como añadir boletas del mercado secundario si las hay.
      * 
      * @param evento    indice del evento deportivo al que quiere asistir.
@@ -50,7 +50,12 @@ public class Seguidor {
         }
     
     }
-    
+    /**
+     * El método comprarServicioAdicional añade un servicio adicional comprado al inventario del seguidor.
+     * 
+     * @param evento    el evento del cual se desea comprar un servicio adicional.
+     * @param numSer    el número del servicio adicional que se desea comprar.
+     */
     public void comprarServicioAdicional(EventoDeportivo evento, int numSer){
         ArrayList<ServicioAdicionalClub> serv = evento.getServicios();
         
@@ -73,17 +78,41 @@ public class Seguidor {
         
     }
     
-    public void venderBoleta(Boleta boleta){
-        
-    
+    /**
+     * El método venderBoleta permite añadir al mercado secundario una boleta determinada.
+     * 
+     * @param indiceBoleta  el índice de la boleta perteneciente al inventario que se quiere vender.
+     */
+    public void venderBoleta(int indiceBoleta){
+        Boleta boleta = boletasCompradas.get(indiceBoleta);
+        Localidad localidad = boleta.getLocalidad();
+        MercadoSecundario mercado = localidad.getMercadoSecundario();
+        mercado.añadirBoleta(boleta);
+        boletasCompradas.remove(indiceBoleta);
+        boletasEnVenta.add(boleta);
     }
     
-    public void transferirBoleta(){
-    
-    
+    /**
+     * El método transferirBoleta permite pasar una determinada boleta del inventario a otro usuario, cuando esto se realiza,
+     * se elimina la boleta del inventario del remitente.
+     * 
+     * @param seguidor  corresponde al usuario al que se le pasará la boleta.
+     * @param indiceBoleta  corresponde al indice de la boleta que se desea transferir.
+     */
+    public void transferirBoleta(Seguidor seguidor, int indiceBoleta){
+        Boleta boleta = boletasCompradas.get(indiceBoleta);
+        seguidor.añadirBoleta(boleta);
+        boletasCompradas.remove(indiceBoleta);
     }
     
-    
+    /**
+     * El método añadirBoleta permite añadir una boleta al inventario del usuario, este método solo se está usando por medio de transferirBoleta.
+     * 
+     * @param boleta    la boleta que se desea añadir al inventario.
+     */
+    public void añadirBoleta(Boleta boleta){
+        boletasCompradas.add(boleta);
+    }
     
     // Setters
     public void setDocumentoDeIdentidad(String documentoDeIdentidad) {

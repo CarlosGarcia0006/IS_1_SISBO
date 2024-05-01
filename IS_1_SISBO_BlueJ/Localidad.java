@@ -19,6 +19,7 @@ public class Localidad {
         this.precio = precio;
         this.cantidadPuestosVendidos = 0;
         this.evento = evento;
+        mercadoSecundario = new MercadoSecundario();
     }
     public Boleta generarBoleta(){
         Boleta boleta = null;
@@ -58,7 +59,10 @@ public class Localidad {
     public void setCantidadPuestosVendidos(int cantidadPuestosVendidos) {
         this.cantidadPuestosVendidos = cantidadPuestosVendidos;
     }
-
+    
+    public void setMercadoSecundario(MercadoSecundario mercado){
+        this.mercadoSecundario = mercado;
+    }
     // Getters
     public String getNombre() {
         return nombre;
@@ -74,6 +78,10 @@ public class Localidad {
 
     public int getCantidadPuestosVendidos() {
         return cantidadPuestosVendidos;
+    }
+    
+    public MercadoSecundario getMercadoSecundario(){
+        return mercadoSecundario;
     }
 }
 

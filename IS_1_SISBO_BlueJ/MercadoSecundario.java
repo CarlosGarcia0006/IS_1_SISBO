@@ -9,7 +9,7 @@ public class MercadoSecundario
 {
     private ArrayList<Boleta> boletas;
     // Constructor
-    public MercadoSecundario(int numeroBoletas) {
+    public MercadoSecundario() {
         boletas = new ArrayList();
     }    
     
@@ -25,6 +25,12 @@ public class MercadoSecundario
         return boletas;
         
     }
-
+    
+    public void añadirBoleta(Boleta boleta){
+    
+        boletas.add(boleta);
+    
+    }
+    
 }
 
