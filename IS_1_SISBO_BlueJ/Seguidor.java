@@ -12,6 +12,8 @@ public class Seguidor {
     private String correo;
     private String contraseña;
     private ArrayList<Boleta> boletasCompradas;
+    private ArrayList<ServicioAdicionalSeguidor> servicios;
+    
     
     // Constructor
     public Seguidor(String documentoDeIdentidad, String nombre, String correo, String contraseña) {
@@ -27,21 +29,52 @@ public class Seguidor {
      * como añadir boletas del mercado secundario si las hay.
      * 
      * @param evento    indice del evento deportivo al que quiere asistir.
+     * @param numLoc    se refiere al número o índice correspondiente a la localidad de la que se desea hacer la compra.
      */
     
-    public void comprarBoleta(int evento){
+    public void comprarBoleta(EventoDeportivo evento, int numLoc){
     
+        ArrayList<Localidad> localidades = evento.getLocalidades();
         
+        Localidad localidad = localidades.get(numLoc);
+        
+        boolean pagoCorrecto = true;
+        
+        if (pagoCorrecto && localidad.puedeGenerar()){
+            Boleta boleta = localidad.generarBoleta();
+            boletasCompradas.add(boleta);
+        } else if (!pagoCorrecto && localidad.puedeGenerar()){
+            System.out.println("Pago rechazado.");
+        } else if (!localidad.puedeGenerar() && pagoCorrecto){
+            System.out.println("Las boletas para esta localidad se encuentran agotadas.");
+        }
     
     }
     
-    public void comprarServicioAdicional(){
-    
-    
+    public void comprarServicioAdicional(EventoDeportivo evento, int numSer){
+        ArrayList<ServicioAdicionalClub> serv = evento.getServicios();
+        
+        ServicioAdicionalClub servicio  = serv.get(numSer);
+        
+        String name = servicio.getNombre();
+        String descripcion = servicio.getDescripcion();
+        
+        boolean pagoCorrecto = true;
+        
+        if(pagoCorrecto && servicio.puedeVender()){
+            ServicioAdicionalSeguidor adicional = new ServicioAdicionalSeguidor(nombre,descripcion);
+            servicios.add(adicional);
+            System.out.println("Se ha completado la compra del servicio adicional "+name+" para el evento vs "+evento.getOponente());
+        } else if (!pagoCorrecto && servicio.puedeVender()){
+            System.out.println("Pago rechazado.");
+        } else if (!servicio.puedeVender() && pagoCorrecto){
+            System.out.println("Este servicio adicional para la localidad seleccionada se encuentra agotado.");
+        }
+        
     }
     
-    public void venderBoleta(){
-    
+    public void venderBoleta(Boleta boleta){
+        
     
     }
     

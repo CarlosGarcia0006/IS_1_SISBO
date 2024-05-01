@@ -16,7 +16,7 @@ public class EventoDeportivo {
     private String horaIngreso;
     private String horaCierre;
     private ArrayList<Localidad> localidades;
-    private ArrayList<ServicioAdicional> servicios;
+    private ArrayList<ServicioAdicionalClub> servicios;
 
     // Constructor
     public EventoDeportivo(String oponente, String estadio, String fecha, String horaIngreso, String horaCierre) {
@@ -37,9 +37,16 @@ public class EventoDeportivo {
      */
     public void añadirServicioAdicional(String name, String desc, int price, int max){
     
-        ServicioAdicional serv = new ServicioAdicional(name,desc,price,max);
+        ServicioAdicionalClub serv = new ServicioAdicionalClub(name,desc,price,max);
         servicios.add(serv);
         System.out.println("Se ha añadido el servicio "+name+" al evento vs "+oponente);
+    }
+    
+    public void añadirLocalidad(String name, int price, int cant){
+        Localidad loc = new Localidad(name,price,cant,this);
+        localidades.add(loc);
+        System.out.println("Se ha añadido la localidad "+name+" satisfactoriamente al evento vs "+oponente);
+        
     }
     
     // Setters
@@ -67,7 +74,7 @@ public class EventoDeportivo {
         this.localidades = localidades;
     }
     
-    public void setServicios(ArrayList<ServicioAdicional> servicios){
+    public void setServicios(ArrayList<ServicioAdicionalClub> servicios){
         this.servicios = servicios;
     }
     // Getters
@@ -95,7 +102,7 @@ public class EventoDeportivo {
         return localidades;
     }
     
-    public ArrayList<ServicioAdicional> getServicios(){
+    public ArrayList<ServicioAdicionalClub> getServicios(){
         return servicios;
     }
     

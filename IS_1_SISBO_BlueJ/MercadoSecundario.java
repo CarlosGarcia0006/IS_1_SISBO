@@ -7,21 +7,24 @@ import java.util.ArrayList;
  */
 public class MercadoSecundario
 {
-    private int numeroBoletas;
     private ArrayList<Boleta> boletas;
     // Constructor
     public MercadoSecundario(int numeroBoletas) {
-        this.numeroBoletas = numeroBoletas;
+        boletas = new ArrayList();
+    }    
+    
+    
+    public void setBoletas(ArrayList<Boleta> boletas){
+    
+        this.boletas = boletas;
+    
+    }
+    
+    public ArrayList<Boleta> getBoletas(ArrayList<Boleta> boletas){
+    
+        return boletas;
+        
     }
 
-    // Setter
-    public void setNumeroBoletas(int numeroBoletas) {
-        this.numeroBoletas = numeroBoletas;
-    }
-
-    // Getter
-    public int getNumeroBoletas() {
-        return numeroBoletas;
-    }
 }
 

@@ -8,15 +8,11 @@
 public class ServicioAdicional {
     private String nombre;
     private String descripcion;
-    private int precio;
-    private int unidadesMaximas;
 
     // Constructor
-    public ServicioAdicional(String nombre, String descripcion, int precio, int unidadesMaximas) {
+    public ServicioAdicional(String nombre, String descripcion) {
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.precio = precio;
-        this.unidadesMaximas = unidadesMaximas;
     }
 
     // Setters
@@ -27,15 +23,6 @@ public class ServicioAdicional {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
-
-    public void setPrecio(int precio) {
-        this.precio = precio;
-    }
-
-    public void setUnidadesMaximas(int unidadesMaximas) {
-        this.unidadesMaximas = unidadesMaximas;
-    }
-
     // Getters
     public String getNombre() {
         return nombre;
@@ -43,13 +30,5 @@ public class ServicioAdicional {
 
     public String getDescripcion() {
         return descripcion;
-    }
-
-    public int getPrecio() {
-        return precio;
-    }
-
-    public int getUnidadesMaximas() {
-        return unidadesMaximas;
     }
 }

@@ -10,16 +10,38 @@ public class Localidad {
     private int precio;
     private int cantidadPuestosTotal;
     private int cantidadPuestosVendidos;
-    private MercadoPrincipal mercadoPrincipal;
     private MercadoSecundario mercadoSecundario;
+    private EventoDeportivo evento;
     // Constructor
-    public Localidad(String nombre, int precio, int cantidadPuestosTotal, int cantidadPuestosVendidos) {
+    public Localidad(String nombre, int precio, int cantidadPuestosTotal, EventoDeportivo evento) {
         this.nombre = nombre;
         this.cantidadPuestosTotal = cantidadPuestosTotal;
         this.precio = precio;
-        this.cantidadPuestosVendidos = cantidadPuestosVendidos;
+        this.cantidadPuestosVendidos = 0;
+        this.evento = evento;
     }
-
+    public Boleta generarBoleta(){
+        Boleta boleta = null;
+        
+        if(puedeGenerar()){
+            boleta = new Boleta(precio,evento,this);
+            cantidadPuestosVendidos++;
+        }
+        else{
+            System.out.println("El número de boletas vendidas para esta localidad ha sido alcanzado.");
+        }
+            
+        return boleta;
+    }
+    
+    public boolean puedeGenerar(){
+        boolean bool = false;
+        
+        if(cantidadPuestosVendidos < cantidadPuestosTotal){
+            bool = true;
+        }
+        return bool;
+    }
     // Setters
     public void setNombre(String nombre) {
         this.nombre = nombre;
