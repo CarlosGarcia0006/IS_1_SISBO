@@ -5,29 +5,42 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Localidad
-{
-    // instance variables - replace the example below with your own
-    private int x;
+public class Localidad {
+    private String nombre;
+    private int cantidadPuestosTotal;
+    private int cantidadPuestosVendidos;
 
-    /**
-     * Constructor for objects of class Localidad
-     */
-    public Localidad()
-    {
-        // initialise instance variables
-        x = 0;
+    // Constructor
+    public Localidad(String nombre, int cantidadPuestosTotal, int cantidadPuestosVendidos) {
+        this.nombre = nombre;
+        this.cantidadPuestosTotal = cantidadPuestosTotal;
+        this.cantidadPuestosVendidos = cantidadPuestosVendidos;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    // Setters
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setCantidadPuestosTotal(int cantidadPuestosTotal) {
+        this.cantidadPuestosTotal = cantidadPuestosTotal;
+    }
+
+    public void setCantidadPuestosVendidos(int cantidadPuestosVendidos) {
+        this.cantidadPuestosVendidos = cantidadPuestosVendidos;
+    }
+
+    // Getters
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getCantidadPuestosTotal() {
+        return cantidadPuestosTotal;
+    }
+
+    public int getCantidadPuestosVendidos() {
+        return cantidadPuestosVendidos;
     }
 }
+

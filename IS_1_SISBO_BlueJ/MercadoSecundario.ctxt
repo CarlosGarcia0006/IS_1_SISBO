@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=MercadoSecundario
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Mercado_secundario\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=numeroBoletas
+comment1.target=MercadoSecundario(int)
+comment2.params=numeroBoletas
+comment2.target=void\ setNumeroBoletas(int)
+comment3.params=
+comment3.target=int\ getNumeroBoletas()
+numComments=4

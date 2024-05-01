@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Seguidor
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Aficionado\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=documentoDeIdentidad\ nombre\ correo\ contrase\u00F1a
+comment1.target=Seguidor(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment2.params=documentoDeIdentidad
+comment2.target=void\ setDocumentoDeIdentidad(java.lang.String)
+comment3.params=nombre
+comment3.target=void\ setNombre(java.lang.String)
+comment4.params=correo
+comment4.target=void\ setCorreo(java.lang.String)
+comment5.params=contrase\u00F1a
+comment5.target=void\ setContrase\u00F1a(java.lang.String)
+comment6.params=
+comment6.target=java.lang.String\ getDocumentoDeIdentidad()
+comment7.params=
+comment7.target=java.lang.String\ getNombre()
+comment8.params=
+comment8.target=java.lang.String\ getCorreo()
+comment9.params=
+comment9.target=java.lang.String\ getContrase\u00F1a()
+numComments=10

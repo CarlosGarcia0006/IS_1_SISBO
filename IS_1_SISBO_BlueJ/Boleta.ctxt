@@ -1,10 +1,14 @@
 #BlueJ class context
 comment0.target=Boleta
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ Boleta\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=Boleta()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Boleta\r\n
-comment2.params=y
-comment2.target=int\ sampleMethod(int)
-comment2.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
-numComments=3
+comment1.params=precio\ evento
+comment1.target=Boleta(int,\ EventoDeportivo)
+comment2.params=precio
+comment2.target=void\ setPrecio(int)
+comment3.params=
+comment3.target=int\ getPrecio()
+comment4.params=evento
+comment4.target=void\ setEvento(EventoDeportivo)
+comment5.params=
+comment5.target=EventoDeportivo\ getEvento()
+numComments=6

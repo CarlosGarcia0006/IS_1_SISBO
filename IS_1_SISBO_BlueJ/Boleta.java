@@ -5,29 +5,34 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Boleta
-{
-    // instance variables - replace the example below with your own
-    private int x;
+public class Boleta {
+    private int precio;
+    private EventoDeportivo evento;
 
-    /**
-     * Constructor for objects of class Boleta
-     */
-    public Boleta()
-    {
-        // initialise instance variables
-        x = 0;
+    // Constructor
+    public Boleta(int precio, EventoDeportivo evento) {
+        this.precio = precio;
+        this.evento = evento;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    // Setter para precio
+    public void setPrecio(int precio) {
+        this.precio = precio;
+    }
+
+    // Getter para precio
+    public int getPrecio() {
+        return precio;
+    }
+
+    // Setter para evento
+    public void setEvento(EventoDeportivo evento) {
+        this.evento = evento;
+    }
+
+    // Getter para evento
+    public EventoDeportivo getEvento() {
+        return evento;
     }
 }
+
