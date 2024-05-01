@@ -7,19 +7,25 @@
  */
 public class Localidad {
     private String nombre;
+    private int precio;
     private int cantidadPuestosTotal;
     private int cantidadPuestosVendidos;
 
     // Constructor
-    public Localidad(String nombre, int cantidadPuestosTotal, int cantidadPuestosVendidos) {
+    public Localidad(String nombre, int precio, int cantidadPuestosTotal, int cantidadPuestosVendidos) {
         this.nombre = nombre;
         this.cantidadPuestosTotal = cantidadPuestosTotal;
+        this.precio = precio;
         this.cantidadPuestosVendidos = cantidadPuestosVendidos;
     }
 
     // Setters
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+    
+    public void setPrecio(int precio) {
+        this.precio = precio;
     }
 
     public void setCantidadPuestosTotal(int cantidadPuestosTotal) {
@@ -34,7 +40,11 @@ public class Localidad {
     public String getNombre() {
         return nombre;
     }
-
+    
+    public int getPrecio(){
+        return precio;
+    }
+    
     public int getCantidadPuestosTotal() {
         return cantidadPuestosTotal;
     }
