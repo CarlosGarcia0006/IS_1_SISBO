@@ -29,6 +29,7 @@ public class Seguidor {
         this.nombre = nombre;
         this.correo = correo;
         this.contraseña = contraseña;
+        this.servicios = new ArrayList();
         this.boletasCompradas = new ArrayList();
         this.boletasEnVenta = new ArrayList();
     }

@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=DemoSeguidor
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Main\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=void\ DemoSeguidor()
-comment1.text=\r\n\ El\ m\u00E9todo\ que\ ejecuta\ una\ interfaz\ similar\ a\ la\ demo\ del\ seguidor.\r\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Main\ here.\r\n\ \r\n\ @author\ (Carlos,\ Juan)\ \r\n\ @version\ (04/05/2024)\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\r\n\ Este\ metodo\ permite\ ver\ la\ funcionalidad\ de\ la\ clase\ seguidor\ en\ el\ proceso\ de\ varios\ casos\ de\ uso\ como\ comprar\ boletas\ o\ vender\ sus\ boletas\ en\ el\ mercado\ secundario.\r\n
 numComments=2

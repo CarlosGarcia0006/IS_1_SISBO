@@ -66,20 +66,25 @@ public class Club
      * @param eventoDeportivo   El índice del evento deportivo que se desea consultar
      * 
      */
-    public void consultarCantidadDeBoletasVendidas(int eventoDeportivo){
+    public String consultarCantidadDeBoletasVendidas(int eventoDeportivo){
 
-        EventoDeportivo evento = eventos.get(eventoDeportivo);
-        ArrayList<Localidad> localidades = evento.getLocalidades();
-        if (!localidades.isEmpty()){
-            for (Localidad loc : localidades){
-                int total = loc.getCantidadPuestosTotal();
-                int vendidos = loc.getCantidadPuestosVendidos();
-                int disponibles = total-vendidos;
-                System.out.println("La localidad "+loc.getNombre()+":\n Total:"+total+"\n Vendidos:"+vendidos+"\n Disponibles:"+disponibles+"\n\n");
+        if(!eventos.isEmpty() && eventos.get(eventoDeportivo)!=null){
+            EventoDeportivo evento = eventos.get(eventoDeportivo);
+            ArrayList<Localidad> localidades = evento.getLocalidades();
+            if (!localidades.isEmpty()){
+                for (Localidad loc : localidades){
+                    int total = loc.getCantidadPuestosTotal();
+                    int vendidos = loc.getCantidadPuestosVendidos();
+                    int disponibles = total-vendidos;
+                    return("La localidad "+loc.getNombre()+":\n Total:"+total+"\n Vendidos:"+vendidos+"\n Disponibles:"+disponibles+"\n\n");
+                }
+            }else{
+            return("El evento no tiene localidades asignadas.");
             }
         }else{
-            System.out.println("El evento no tiene localidades asignadas.");
+            return("El evento buscado no existe");
         }
+        return("si llegó hasta acá, ha ocurrido un error");
     }
     
     /**
@@ -140,6 +145,19 @@ public class Club
     
         return correosVinculados;
     
+    }
+    
+    public ArrayList<EventoDeportivo> getEventos(){
+        return eventos;
+    }
+    
+    public EventoDeportivo getEvento(int indice){
+        if (indice >= 0 && indice < eventos.size()) {
+            return eventos.get(indice);
+        } else {
+            System.out.println("Índice fuera de los límites.");
+            return null;
+        }
     }
     
     public void setNombre(String nombre){
