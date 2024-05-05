@@ -166,4 +166,12 @@ public class Seguidor {
     public ArrayList<Boleta> getBoletasCompradas(){
         return boletasCompradas;
     }
+    
+    public ArrayList<ServicioAdicionalSeguidor> getServicios(){
+        return servicios;
+    }
+    
+    public ArrayList<Boleta> getBoletasEnVenta(){
+        return boletasEnVenta;
+    }
 }

@@ -21,13 +21,17 @@ public class Localidad {
      * @param cantidadPuestosTotal      La cantidad de puestos totales que se podrán vender de esta localidad.
      * @param evento    el evento deportivo al que estará relacionado.
      */
-    public Localidad(String nombre, int precio, int cantidadPuestosTotal, EventoDeportivo evento) {
-        this.nombre = nombre;
-        this.cantidadPuestosTotal = cantidadPuestosTotal;
-        this.precio = precio;
-        this.cantidadPuestosVendidos = 0;
-        this.evento = evento;
-        mercadoSecundario = new MercadoSecundario();
+    public Localidad(String nombre, int precio, int cantidadPuestosTotal, EventoDeportivo evento) throws IllegalArgumentException {
+        if (precio > 0 && cantidadPuestosTotal > 0) {
+            this.nombre = nombre;
+            this.precio = precio;
+            this.cantidadPuestosTotal = cantidadPuestosTotal;
+            this.cantidadPuestosVendidos = 0;
+            this.evento = evento;
+            mercadoSecundario = new MercadoSecundario();
+        } else {
+            throw new IllegalArgumentException("Los datos para la creación de la localidad son incorrectos");
+        }
     }
     
     /**
@@ -104,6 +108,10 @@ public class Localidad {
     
     public MercadoSecundario getMercadoSecundario(){
         return mercadoSecundario;
+    }
+    
+    public EventoDeportivo getEventoDeportivo(){
+        return evento;
     }
 }
 

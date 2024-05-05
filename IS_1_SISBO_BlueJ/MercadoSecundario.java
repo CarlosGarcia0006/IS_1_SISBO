@@ -27,14 +27,13 @@ public class MercadoSecundario
     
     }
     
-    
     public void setBoletas(ArrayList<Boleta> boletas){
     
         this.boletas = boletas;
     
     }
     
-    public ArrayList<Boleta> getBoletas(ArrayList<Boleta> boletas){
+    public ArrayList<Boleta> getBoletas(){
     
         return boletas;
         
