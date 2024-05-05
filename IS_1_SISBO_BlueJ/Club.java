@@ -78,6 +78,7 @@ public class Club
                     int disponibles = total-vendidos;
                     return("La localidad "+loc.getNombre()+":\n Total:"+total+"\n Vendidos:"+vendidos+"\n Disponibles:"+disponibles+"\n\n");
                 }
+                System.out.println("hola caballero");
             }else{
             return("El evento no tiene localidades asignadas.");
             }

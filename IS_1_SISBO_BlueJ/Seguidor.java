@@ -53,6 +53,7 @@ public class Seguidor {
         if (pagoCorrecto && localidad.puedeGenerar()){
             Boleta boleta = localidad.generarBoleta();
             boletasCompradas.add(boleta);
+            System.out.println("Pago realizado.");
         } else if (!pagoCorrecto && localidad.puedeGenerar()){
             System.out.println("Pago rechazado.");
         } else if (!localidad.puedeGenerar() && pagoCorrecto){
@@ -101,6 +102,7 @@ public class Seguidor {
         mercado.añadirBoleta(boleta);
         boletasCompradas.remove(indiceBoleta);
         boletasEnVenta.add(boleta);
+        System.out.println("Boleta vendida");
     }
     
     /**
